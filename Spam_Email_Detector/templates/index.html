@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Email Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>📧 Spam Email Detector</h1>
+
+<form action="/predict" method="POST">
+
+<textarea name="message"
+placeholder="Enter Email Message Here"></textarea>
+
+<br><br>
+
+<button type="submit">Detect Spam</button>
+
+</form>
+
+<div class="result">
+{{ prediction }}
+</div>
+
+</div>
+
+</body>
+</html>
